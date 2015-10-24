@@ -84,16 +84,18 @@ if (!empty( $data['config']['LANGUAGE'])) {
 }
 
 if (empty($_GET['action'])) {
-    require_once '../templates/header.html';
+    require_once '../templates/login_header.html';
     require_once '../templates/reset_1.html';
+    require_once '../templates/login_footer.html';
 } else {
-    require_once '../templates/header.html';
+    require_once '../templates/login_header.html';
     if ($_GET['action'] == 'code' ) {
         require_once '../templates/reset_2.html';
     }
     if (($_GET['action'] == 'confirm' ) && (!empty($_GET['code']))) {
         require_once '../templates/reset_3.html';
     }
+    require_once '../templates/login_footer.html';
 }
 
 ?>
